@@ -2,7 +2,7 @@
 
 Minimal pipeline for RLActionToken on LIBERO:
 
-1. **`run_action_token_5traj_alltasks.sh`** — End-to-end training (Phase 1 encoder pretrain + Phase 2 off-policy TD3 RL)
+1. **`run_rlat_5traj_alltasks.sh`** — End-to-end training (Phase 1 encoder pretrain + Phase 2 off-policy TD3 RL)
 2. **`run_eval_action_token.sh`** — Parallel per-task eval over a training run
 
 > **Naming note.** The module directory was renamed from `RLT` to
@@ -27,10 +27,10 @@ Minimal pipeline for RLActionToken on LIBERO:
 
 ```bash
 # default: GPUs 0,2,3,4,5 for rollout, 1 for train
-bash scripts/run_rl_scripts/run_action_token_5traj_alltasks.sh
+bash scripts/run_rl_scripts/run_rlat_5traj_alltasks.sh
 
 # override GPU layout
-bash scripts/run_rl_scripts/run_action_token_5traj_alltasks.sh "0,1,2,3,4,5"
+bash scripts/run_rl_scripts/run_rlat_5traj_alltasks.sh "0,1,2,3,4,5"
 ```
 
 
@@ -56,7 +56,7 @@ The 10 tasks are split across the given GPUs and aggregated inline. Output lands
 
 ## CLI Reference
 
-Key knobs inside `run_action_token_5traj_alltasks.sh` (edit if your hardware differs):
+Key knobs inside `run_rlat_5traj_alltasks.sh` (edit if your hardware differs):
 
 | Flag | Default | Meaning |
 |:-----|:--------|:--------|

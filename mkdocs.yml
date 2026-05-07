@@ -109,6 +109,9 @@ nav:
     - Baseline VLA: quickstart/baselineVLA.md
     - NeuroVLA: quickstart/neurovla.md
     - RL-Token: quickstart/rl_token.md
+    - RL-Token Architecture: quickstart/rlt_architecture.md
+    - RL-Token Code Training Flow: quickstart/rlt_code_training_flow.md
+    - RL-Token Actor/Critic Data Flow: quickstart/rlt_actor_critic_dataflow.md
     - World Model: quickstart/world_model.md
     - Continual Learning: quickstart/continual_learning.md
   - API Reference:

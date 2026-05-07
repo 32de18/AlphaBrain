@@ -2,6 +2,8 @@
 
 Two-phase TD3 online RL fine-tuning on a pretrained QwenOFT VLA — encoder pretrain + off-policy rollouts.
 
+For source-level notes, see [RLT / RLActionToken Architecture](rlt_architecture.md). For the full entry-to-loss code path, see [RLActionToken Code Training Flow](rlt_code_training_flow.md). For the actor/action and critic training data flow with formulas, see [RL Token Actor / Critic Data Flow](rlt_actor_critic_dataflow.md).
+
 ---
 
 ## Prerequisites
@@ -16,10 +18,10 @@ Two-phase TD3 online RL fine-tuning on a pretrained QwenOFT VLA — encoder pret
 
 ```bash
 # default GPU layout: 0,2,3,4,5 rollout, 1 train
-bash scripts/run_rl_scripts/run_action_token_5traj_alltasks.sh
+bash scripts/run_rl_scripts/run_rlat_5traj_alltasks.sh
 
 # custom GPU layout (rollout0,rollout1,...,train)
-bash scripts/run_rl_scripts/run_action_token_5traj_alltasks.sh "0,1,2,3,4,5"
+bash scripts/run_rl_scripts/run_rlat_5traj_alltasks.sh "0,1,2,3,4,5"
 ```
 
 Checkpoints: `results/action_token_training_TD3/<run>_<ts>/rl_offpolicy/checkpoints/rl_offpolicy_iter_NNNNN/`.
